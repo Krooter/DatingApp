@@ -1,0 +1,15 @@
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Data.deps.json
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Data.dll
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.csprojAssemblyReference.cache
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.AssemblyInfoInputs.cache
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.AssemblyInfo.cs
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Data.runtimeconfig.json
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Data.runtimeconfig.dev.json
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.genruntimeconfig.cache
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Data.pdb
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Core.dll
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Core.pdb
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.csproj.CopyComplete
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.dll
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.pdb
