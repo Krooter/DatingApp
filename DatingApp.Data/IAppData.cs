@@ -6,7 +6,7 @@ namespace DatingApp.Data
 {
     public interface IAppData
     {
-        public Task<IEnumerable<Values>> GetValues();
-        public Task<Values> GetById(int id);
+        Task<IEnumerable<Values>> GetValues();
+        Task<Values> GetById(int id);
     }
 }

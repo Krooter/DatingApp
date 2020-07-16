@@ -9,7 +9,7 @@ C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingAp
 C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Data.pdb
 C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Core.dll
 C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\bin\Debug\netcoreapp3.1\DatingApp.Core.pdb
-C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.csproj.CoreCompileInputs.cache
 C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.csproj.CopyComplete
 C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.dll
 C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.pdb
+C:\Users\cpole\Desktop\.NET Core\DatingApp.Data\obj\Debug\netcoreapp3.1\DatingApp.Data.csproj.CoreCompileInputs.cache
