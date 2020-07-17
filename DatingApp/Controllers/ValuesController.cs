@@ -21,16 +21,15 @@ namespace DatingApp.API.Controllers
             this.appData = appData;
         }
 
-        // GET api/values
-        [HttpGet]
         [AllowAnonymous]
+        [HttpGet]
         public async Task<IActionResult> GetValues()
         {
             var Values = await appData.GetValues();
             return Ok(Values);
         }
 
-        // GET api/values/5
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {
