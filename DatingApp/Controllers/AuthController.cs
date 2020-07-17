@@ -38,7 +38,7 @@ namespace DatingApp.Controllers
 
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
 
-            if(await _authorizeData.UserExists(userForRegisterDto.Username))
+            if (await _authorizeData.UserExists(userForRegisterDto.Username))
             {
                 return BadRequest("Username already exists");
             }
@@ -58,7 +58,7 @@ namespace DatingApp.Controllers
         {
             var userFromRepo = await _authorizeData.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
-            if(userFromRepo == null)
+            if (userFromRepo == null)
             {
                 return Unauthorized();
             }
