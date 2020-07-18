@@ -11,5 +11,6 @@ namespace DatingApp.Data
         public DataDbContext(DbContextOptions<DataDbContext> options) : base(options) { }
         public DbSet<Values> Values { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Photo> Photos { get; set; }
     }
 }

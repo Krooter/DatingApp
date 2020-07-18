@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "Au2ayVcEdrpjsYhSQ370/q4jAlYLeITh1snjTZzOE5X/EyQnIb7dMMMoNYv1oMgQBbpgzHoZO4tdvztWZrUDQQ==",
+  "dgSpecHash": "XlYYxfFnC/xJmQ0E9hHxLzosSw8eAkcrb1lIDWx6sQ1AucsAoE8nAyO1FU+kBIB8gyXrFHz+cjMal7vQf2xYjg==",
   "success": true,
   "projectFilePath": "C:\\Users\\cpole\\Desktop\\.NET Core\\DatingApp.Core\\DatingApp.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\cpole\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\cpole\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\cpole\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\cpole\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\cpole\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\cpole\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\cpole\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
