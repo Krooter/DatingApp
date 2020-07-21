@@ -37,6 +37,7 @@ namespace DatingApp
             services.AddScoped<IAuthRepository, AppData>();
             services.AddScoped<IDataRepository, AppUser>();
             services.AddCors();
+            services.Configure<ClaudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper(typeof(Startup));
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
             {

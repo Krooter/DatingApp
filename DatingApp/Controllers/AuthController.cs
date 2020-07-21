@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using DatingApp.Core;
 using DatingApp.Data;
 using DatingApp.Dtos;
@@ -21,11 +22,13 @@ namespace DatingApp.Controllers
     {
         private readonly IAuthRepository _authorizeData;
         private readonly IConfiguration _config;
+        private readonly IMapper mapper;
 
-        public AuthController(IAuthRepository authorizeData, IConfiguration config)
+        public AuthController(IAuthRepository authorizeData, IConfiguration config, IMapper mapper)
         {
             _authorizeData = authorizeData;
             _config = config;
+            this.mapper = mapper;
         }
 
         [HttpPost("register")]
@@ -84,7 +87,13 @@ namespace DatingApp.Controllers
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return Ok(new { token = tokenHandler.WriteToken(token) });
+            var user = mapper.Map<UserForListDto>(userFromRepo);
+
+            return Ok(new 
+            { 
+                token = tokenHandler.WriteToken(token),
+                user
+            });
         }
     }
 }

@@ -11,6 +11,13 @@
   transition-timing-function: ease-out;
 }
 
+img.img-thumbnail{
+  height: 150px;
+  min-width: 150px;
+  margin-bottom: 2;
+  object-fit: contain;
+}
+
 .card-img-wrapper {
   overflow: hidden;
   position: relative;

@@ -12,3 +12,7 @@
 .card-footer {
   padding: 10px 15px;
 }
+
+ngx-gallery /deep/ .ngx-gallery-arrow {
+  color: #F3969A !important;
+}

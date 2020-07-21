@@ -1,0 +1,40 @@
+img.img-thumbnail{
+  height: 150px;
+  min-width: 150px;
+  margin-bottom: 2;
+  object-fit: contain;
+}
+
+.fa.fa-trash {
+  cursor: pointer;
+}
+
+.nv-file-over {
+  border: dotted 3px red;
+}
+
+label{
+  cursor: pointer;
+}
+.fileSpan{
+  cursor: pointer;
+  margin-left: -22px;
+  position: relative;
+}
+
+.fileSpan input {
+display: none;
+}
+.fileSpan .button {
+background: transparent;
+color: black;
+border: transparent;
+padding: 37px 58px;
+margin-left: 5px;
+}
+
+.btn-gray {
+  background-color: rgba(169, 169, 169, 0.315);
+  border-color: rgba(169, 169, 169, 0);
+}
+

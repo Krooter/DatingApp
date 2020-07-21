@@ -18,6 +18,8 @@ namespace DatingApp.Helpers
             CreateMap<User, UserForListDto>().ForMember(dest => dest.PhotoUrl, options => options.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).UrlPhoto))
                 .ForMember(dest => dest.Age, options => options.MapFrom(src => src.DateBirth.CalculateAge()));
             CreateMap<UserForUpdateDto, User>();
+            CreateMap<Photo, PhotoForReturnDto>();
+            CreateMap<PhotoForCreationDto, Photo>();
         }
     }
 }
