@@ -21,6 +21,7 @@ export class PhotoEditorComponent implements OnInit {
   response: string;
   baseUrl = environment.apiUrl;
   currentMain: Photo;
+  basePhotoUrl = '../../assets/user.png';
 
   constructor(private authService: AuthService, private userService: UserService, private alertify: AlertifyService) {
     this.uploader = new FileUploader({
@@ -78,6 +79,11 @@ export class PhotoEditorComponent implements OnInit {
           isMain: res.isMain
         };
         this.photos.push(photo);
+        if (photo.isMain){
+          this.authService.changeMemberPhoto(photo.urlPhoto);
+          this.authService.currentUser.photoUrl = photo.urlPhoto;
+          localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
+        }
       }
     };
   }
@@ -100,6 +106,9 @@ export class PhotoEditorComponent implements OnInit {
     this.alertify.confirm('Are you sure you want to delete this photo?', () => {
       this.userService.deletePhoto(this.authService.decodedToken.nameid, id).subscribe(() => {
         this.photos.splice(this.photos.findIndex(p => p.id === id), 1);
+        this.authService.changeMemberPhoto(this.basePhotoUrl);
+        this.authService.currentUser.photoUrl = this.basePhotoUrl;
+        localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
         this.alertify.success('Photo has been deleted');
       }, error => {
         this.alertify.error(error);

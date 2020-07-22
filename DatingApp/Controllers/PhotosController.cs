@@ -145,11 +145,6 @@ namespace DatingApp.Controllers
 
             var photoForRepo = await dataRepository.GetPhoto(id);
 
-            if (photoForRepo.IsMain)
-            {
-                return BadRequest("You cannot delete your main photo");
-            }
-
             if (photoForRepo.PublicId != null)
             {
                 var deleteParams = new DeletionParams(photoForRepo.PublicId);
