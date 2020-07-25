@@ -9,11 +9,12 @@ namespace DatingApp.Dtos
     public class PhotoForCreationDto
     {
         public string UrlPhoto { get; set; }
+        public string UrlPhotoAvatar { get; set; }
         public IFormFile File { get; set; }
         public string Description { get; set; }
         public DateTime DateAdded { get; set; }
         public string PublicId { get; set; }
-
+        public string PublicIdAvatar { get; set; }
         public PhotoForCreationDto()
         {
             DateAdded = DateTime.Now;

@@ -62,6 +62,7 @@ namespace DatingApp.Controllers
             var file = photoForCreationDto.File;
 
             var uploadResult = new ImageUploadResult();
+            var uploadResultAvatar = new ImageUploadResult();
 
             if (file.Length > 0)
             {
@@ -70,14 +71,24 @@ namespace DatingApp.Controllers
                     var uploadParams = new ImageUploadParams()
                     {
                         File = new FileDescription(file.Name, stream),
+                        Transformation = new Transformation().Width(500).Height(500).Crop("fill").Gravity("face")
                     };
-
+                    uploadResultAvatar = cloudinary.Upload(uploadParams);
+                }
+                using (var originStream = file.OpenReadStream())
+                {
+                    var uploadParams = new ImageUploadParams()
+                    {
+                        File = new FileDescription(file.Name, originStream),
+                    };
                     uploadResult = cloudinary.Upload(uploadParams);
                 }
             }
 
             photoForCreationDto.UrlPhoto = uploadResult.Url.ToString();
             photoForCreationDto.PublicId = uploadResult.PublicId;
+            photoForCreationDto.UrlPhotoAvatar = uploadResultAvatar.Url.ToString();
+            photoForCreationDto.PublicIdAvatar = uploadResultAvatar.PublicId;
 
             var photo = mapper.Map<Photo>(photoForCreationDto);
 
@@ -118,9 +129,17 @@ namespace DatingApp.Controllers
 
             var currentMainPhoto = await dataRepository.GetMainPhoto(userId);
 
-            currentMainPhoto.IsMain = false;
+            if( currentMainPhoto == null)
+            {
+                photoForRepo.IsMain = true;
 
-            photoForRepo.IsMain = true;
+            } 
+            else
+            {
+                currentMainPhoto.IsMain = false;
+
+                photoForRepo.IsMain = true;
+            }
 
             if (await dataRepository.SaveAll())
             {
@@ -144,12 +163,15 @@ namespace DatingApp.Controllers
             }
 
             var photoForRepo = await dataRepository.GetPhoto(id);
+            var photoForRepoAvatar = await dataRepository.GetPhoto(id);
 
             if (photoForRepo.PublicId != null)
             {
                 var deleteParams = new DeletionParams(photoForRepo.PublicId);
+                var deleteParamsAvatar = new DeletionParams(photoForRepo.PublicIdAvatar);
 
                 var result = cloudinary.Destroy(deleteParams);
+                var resultAvatar = cloudinary.Destroy(deleteParamsAvatar);
 
                 if (result.Result == "ok")
                 {

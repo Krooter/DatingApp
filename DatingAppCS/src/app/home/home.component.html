@@ -4,7 +4,8 @@
     <p>Come on in to view your matches... All you need to do is sign up!</p>
     <p class="text-white">Testaccount</p>
     <div class="text-center">
-      <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">Register</button>
+      <button class="btn btn-primary btn-lg mr-2" *ngIf="!loggedIn()" (click)="registerToggle()">Register</button>
+      <button class="btn btn-primary btn-lg mr-2" *ngIf="loggedIn()" href="#">Message</button>
       <button class="btn btn-secondary btn-lg">Learn More</button>
     </div>
   </div>
@@ -17,4 +18,3 @@
     </div>
   </div>
 </div>
-

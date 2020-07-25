@@ -3,7 +3,7 @@ import { User } from 'src/app/_models/user';
 import { AlertifyService } from 'src/app/_services/alertify.service';
 import { UserService } from 'src/app/_services/user.service';
 import { ActivatedRoute } from '@angular/router';
-import { NgxGalleryImage, NgxGalleryOptions, NgxGalleryAnimation } from '@kolkov/ngx-gallery';
+import { NgxGalleryImage, NgxGalleryOptions, NgxGalleryAnimation, NgxGalleryImageSize, NgxGalleryThumbnailsComponent } from '@kolkov/ngx-gallery';
 
 @Component({
   selector: 'app-member-detail',
@@ -14,6 +14,8 @@ export class MemberDetailComponent implements OnInit {
   user: User;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
+  NgxGalleryImageSize: NgxGalleryImageSize[];
+  galleryThumbnail: NgxGalleryThumbnailsComponent[];
 
   constructor(private userService: UserService, private alertify: AlertifyService, private route: ActivatedRoute) { }
 
@@ -25,28 +27,46 @@ export class MemberDetailComponent implements OnInit {
 
     this.galleryOptions = [
       {
-        width: '500px',
-        height: '500px',
+        width: '700px',
+        height: '1000px',
         imagePercent: 100,
         thumbnailsColumns: 4,
         imageAnimation: NgxGalleryAnimation.Fade,
         preview: false,
         imageArrowsAutoHide: true,
         imageInfinityMove: true,
+        imageSize: NgxGalleryImageSize.Contain,
+        thumbnailSize: NgxGalleryImageSize.Contain,
+        thumbnailsMargin: 10
+      },
+      {
+        breakpoint: 1100,
+        width: '100%',
+        height: '1100px',
+        imagePercent: 80,
+        thumbnailsPercent: 10,
+        thumbnailsMargin: 10,
+        thumbnailMargin: 10,
+        thumbnailSize: NgxGalleryImageSize.Contain
+      },
+      {
+        thumbnailSize: NgxGalleryImageSize.Contain,
+        breakpoint: 400,
+        preview: true
       }
     ];
 
     this.galleryImages = this.getImages();
   }
-
   getImages() {
     const imageUrls = [];
     for (const photo of this.user.photos) {
       imageUrls.push({
+        thumbnailSize: NgxGalleryImageSize.Contain,
         small: photo.urlPhoto,
         medium: photo.urlPhoto,
         big: photo.urlPhoto,
-        description: photo.description
+        description: photo.description,
       });
     }
     return imageUrls;

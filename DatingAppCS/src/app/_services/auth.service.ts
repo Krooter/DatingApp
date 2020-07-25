@@ -14,15 +14,15 @@ export class AuthService {
   jwtHelper = new JwtHelperService();
   decodedToken: any;
   currentUser: User;
-  photoUrl = new BehaviorSubject<string>('../../assets/user.png');
-  currentPhotoUrl = this.photoUrl.asObservable();
+  photoUrlAvatar = new BehaviorSubject<string>('../../assets/user.png');
+  currentPhotoUrl = this.photoUrlAvatar.asObservable();
 
 constructor(private http: HttpClient) {
 
  }
 
- changeMemberPhoto(photoUrl: string) {
-   this.photoUrl.next(photoUrl);
+ changeMemberPhoto(photoUrlAvatar: string) {
+   this.photoUrlAvatar.next(photoUrlAvatar);
  }
 
  // tslint:disable: typedef
@@ -35,7 +35,7 @@ constructor(private http: HttpClient) {
           localStorage.setItem('user', JSON.stringify(user.user));
           this.currentUser = user.user;
           this.decodedToken = this.jwtHelper.decodeToken(user.token);
-          this.changeMemberPhoto(this.currentUser.photoUrl);
+          this.changeMemberPhoto(this.currentUser.photoUrlAvatar);
         }
       })
     );

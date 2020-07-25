@@ -9,6 +9,7 @@ export interface User {
   created: Date;
   lastOnline: Date;
   photoUrl: string;
+  photoUrlAvatar: string;
   city: string;
   country: string;
   interests?: string;

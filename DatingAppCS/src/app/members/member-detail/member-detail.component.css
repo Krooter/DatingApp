@@ -16,3 +16,8 @@
 ngx-gallery /deep/ .ngx-gallery-arrow {
   color: #F3969A !important;
 }
+
+ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-active {
+  border: 1px double #F3969A !important;
+  border-radius: 5%;
+}

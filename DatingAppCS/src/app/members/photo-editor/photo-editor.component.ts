@@ -76,12 +76,13 @@ export class PhotoEditorComponent implements OnInit {
           urlPhoto: res.urlPhoto,
           description: res.description,
           dateAdded: res.dateAdded,
-          isMain: res.isMain
+          isMain: res.isMain,
+          urlPhotoAvatar: res.urlPhotoAvatar
         };
         this.photos.push(photo);
         if (photo.isMain){
-          this.authService.changeMemberPhoto(photo.urlPhoto);
-          this.authService.currentUser.photoUrl = photo.urlPhoto;
+          this.authService.changeMemberPhoto(photo.urlPhotoAvatar);
+          this.authService.currentUser.photoUrlAvatar = photo.urlPhotoAvatar;
           localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
         }
       }
@@ -89,30 +90,56 @@ export class PhotoEditorComponent implements OnInit {
   }
 
   setMain(photo: Photo){
-    this.userService.setMain(this.authService.decodedToken.nameid, photo.id).subscribe(() => {
-      this.currentMain = this.photos.filter(p => p.isMain === true)[0];
-      this.currentMain.isMain = false;
-      photo.isMain = true;
-      this.authService.changeMemberPhoto(photo.urlPhoto);
-      this.authService.currentUser.photoUrl = photo.urlPhoto;
-      localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
-      this.alertify.success('Succsefully set to main');
-    }, error => {
-      this.alertify.error(error);
-    });
-  }
-
-  deletePhoto(id: number){
-    this.alertify.confirm('Are you sure you want to delete this photo?', () => {
-      this.userService.deletePhoto(this.authService.decodedToken.nameid, id).subscribe(() => {
-        this.photos.splice(this.photos.findIndex(p => p.id === id), 1);
-        this.authService.changeMemberPhoto(this.basePhotoUrl);
-        this.authService.currentUser.photoUrl = this.basePhotoUrl;
+    if (this.photos.filter(p => p.isMain === true)[0] != null){
+      this.userService.setMain(this.authService.decodedToken.nameid, photo.id).subscribe(() => {
+        this.currentMain = this.photos.filter(p => p.isMain === true)[0];
+        this.currentMain.isMain = false;
+        photo.isMain = true;
+        this.authService.changeMemberPhoto(photo.urlPhotoAvatar);
+        this.authService.currentUser.photoUrl = photo.urlPhotoAvatar;
         localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
-        this.alertify.success('Photo has been deleted');
+        this.alertify.success('Succsefully set to main');
+      }, error => {
+        this.alertify.error(error);
+    });
+  } else {
+        this.userService.setMain(this.authService.decodedToken.nameid, photo.id).subscribe(() => {
+        this.currentMain = this.photos.filter(p => p.id === photo.id)[0];
+        this.currentMain.isMain = true;
+        this.authService.changeMemberPhoto(this.currentMain.urlPhotoAvatar);
+        this.authService.currentUser.photoUrl = this.currentMain.urlPhotoAvatar;
+        localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
+        this.alertify.success('Succsefully set to main');
       }, error => {
         this.alertify.error(error);
       });
-    });
+    }
+  }
+
+  deletePhoto(id: number){
+    console.log(this.photos.findIndex(p => p.id === id && p.isMain === true));
+    if (this.photos.find(p => p.id === id).isMain === false){
+        this.alertify.confirm('Are you sure you want to delete this photo?', () => {
+          this.userService.deletePhoto(this.authService.decodedToken.nameid, id).subscribe(() => {
+            this.photos.splice(this.photos.findIndex(p => p.id === id), 1);
+            localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
+            this.alertify.success('Photo has been deleted');
+          }, error => {
+            this.alertify.error(error);
+          });
+        });
+      } else if (this.photos.find(p => p.id === id).isMain === true){
+        this.alertify.confirm('Are you sure you want to delete this photo?', () => {
+          this.userService.deletePhoto(this.authService.decodedToken.nameid, id).subscribe(() => {
+            this.photos.splice(this.photos.findIndex(p => p.id === id), 1);
+            this.authService.changeMemberPhoto(this.basePhotoUrl);
+            this.authService.currentUser.photoUrl = this.basePhotoUrl;
+            localStorage.setItem('user', JSON.stringify(this.authService.currentUser));
+            this.alertify.success('Photo has been deleted');
+          }, error => {
+            this.alertify.error(error);
+          });
+        });
+    }
   }
 }
