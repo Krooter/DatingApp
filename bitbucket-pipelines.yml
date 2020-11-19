@@ -13,12 +13,14 @@ pipelines:
             caches:
               - node
             script:
+              - cd DatingAppCS
               - npm install
-              - npm test
+              - ng test
+              - ng build --prod
         - step:
             name: Code linting
             script:
-              - npm install eslint
-              - npx eslint .
+              - npm install tslint
+              - tslint .
             caches:
               - node
