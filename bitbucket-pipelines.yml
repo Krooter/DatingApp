@@ -1,0 +1,25 @@
+#  Template NodeJS build
+
+#  This template allows you to validate your NodeJS code.
+#  The workflow allows running tests and code linting on the default branch.
+
+image: node:10.15.3
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Build and Test
+            caches:
+              - node
+            script:
+              - cd DatingAppCS
+              - npm install
+              - npm run build --prod
+        - step:
+            name: Code linting
+            script:
+              - npm install tslint
+              - npm run lint
+            caches:
+              - node
