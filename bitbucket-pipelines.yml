@@ -1,9 +1,9 @@
-#  Template NodeJS build
+#  Template .NET Core build
 
-#  This template allows you to validate your NodeJS code.
+#  This template allows you to validate your .NET Core package.
 #  The workflow allows running tests and code linting on the default branch.
 
-image: node:10.15.3
+image: mcr.microsoft.com/dotnet/core/sdk:3.1
 
 pipelines:
   default:
@@ -11,15 +11,27 @@ pipelines:
         - step:
             name: Build and Test
             caches:
-              - node
+              - dotnetcore
             script:
-              - cd DatingAppCS
-              - npm install
-              - npm run build --prod
+              - cd UnitTests
+              - REPORTS_PATH=./test-reports/build_${BITBUCKET_BUILD_NUMBER}
+              - dotnet restore
+              - dotnet build --no-restore --configuration Release
+              - dotnet test --no-build --configuration Release --test-adapter-path:. --logger:"junit;LogFilePath=$REPORTS_PATH/junit.xml"
+              - cd ../DatingApp
+              - dotnet restore
+              - dotnet build --no-restore --configuration Release
         - step:
-            name: Code linting
-            script:
-              - npm install tslint
-              - npm run lint
+            name: Lint the code
             caches:
-              - node
+              - dotnetcore
+            script:
+              - cd ../DatingApp
+              - export SOLUTION_NAME=HelloProject
+              - export REPORTS_PATH=linter-reports
+              - dotnet new tool-manifest
+              - dotnet tool install JetBrains.ReSharper.GlobalTools
+              - dotnet tool restore
+              - dotnet jb inspectcode ${SOLUTION_NAME}.sln --output="${REPORTS_PATH}/jb-${BITBUCKET_BUILD_NUMBER}.xml"
+            artifacts:
+              - linter-reports/**
