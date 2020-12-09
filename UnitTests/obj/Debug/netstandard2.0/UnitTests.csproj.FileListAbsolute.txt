@@ -1,0 +1,13 @@
+D:\.NET Core\UnitTests\bin\Debug\netstandard2.0\xunit.runner.visualstudio.testadapter.dll
+D:\.NET Core\UnitTests\bin\Debug\netstandard2.0\xunit.runner.reporters.net452.dll
+D:\.NET Core\UnitTests\bin\Debug\netstandard2.0\xunit.runner.utility.net452.dll
+D:\.NET Core\UnitTests\bin\Debug\netstandard2.0\xunit.abstractions.dll
+D:\.NET Core\UnitTests\bin\Debug\netstandard2.0\UnitTests.deps.json
+D:\.NET Core\UnitTests\bin\Debug\netstandard2.0\UnitTests.dll
+D:\.NET Core\UnitTests\bin\Debug\netstandard2.0\UnitTests.pdb
+D:\.NET Core\UnitTests\obj\Debug\netstandard2.0\UnitTests.csprojAssemblyReference.cache
+D:\.NET Core\UnitTests\obj\Debug\netstandard2.0\UnitTests.AssemblyInfoInputs.cache
+D:\.NET Core\UnitTests\obj\Debug\netstandard2.0\UnitTests.AssemblyInfo.cs
+D:\.NET Core\UnitTests\obj\Debug\netstandard2.0\UnitTests.csproj.CoreCompileInputs.cache
+D:\.NET Core\UnitTests\obj\Debug\netstandard2.0\UnitTests.dll
+D:\.NET Core\UnitTests\obj\Debug\netstandard2.0\UnitTests.pdb

@@ -1662,20 +1662,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cpole\\.nuget\\packages\\": {}
+    "C:\\Users\\cpole\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cpole\\Desktop\\.NET Core\\DatingApp.Data\\DatingApp.Data.csproj",
+      "projectUniqueName": "D:\\.NET Core\\DatingApp.Data\\DatingApp.Data.csproj",
       "projectName": "DatingApp.Data",
-      "projectPath": "C:\\Users\\cpole\\Desktop\\.NET Core\\DatingApp.Data\\DatingApp.Data.csproj",
+      "projectPath": "D:\\.NET Core\\DatingApp.Data\\DatingApp.Data.csproj",
       "packagesPath": "C:\\Users\\cpole\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cpole\\Desktop\\.NET Core\\DatingApp.Data\\obj\\",
+      "outputPath": "D:\\.NET Core\\DatingApp.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
         "C:\\Users\\cpole\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -1687,8 +1692,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\cpole\\Desktop\\.NET Core\\DatingApp.Core\\DatingApp.Core.csproj": {
-              "projectPath": "C:\\Users\\cpole\\Desktop\\.NET Core\\DatingApp.Core\\DatingApp.Core.csproj"
+            "D:\\.NET Core\\DatingApp.Core\\DatingApp.Core.csproj": {
+              "projectPath": "D:\\.NET Core\\DatingApp.Core\\DatingApp.Core.csproj"
             }
           }
         }
@@ -1748,11 +1753,14 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

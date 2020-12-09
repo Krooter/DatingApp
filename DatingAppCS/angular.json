@@ -21,7 +21,7 @@
             "aot": true,
             "allowedCommonJsDependencies": [
               "alertifyjs"
-           ],
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "DatingAppCS"
+  "defaultProject": "DatingAppCS",
+  "cli": {
+    "analytics": false
+  }
 }

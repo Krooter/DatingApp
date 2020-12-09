@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XlYYxfFnC/xJmQ0E9hHxLzosSw8eAkcrb1lIDWx6sQ1AucsAoE8nAyO1FU+kBIB8gyXrFHz+cjMal7vQf2xYjg==",
+  "dgSpecHash": "1Lqv/jpRPQxmx0Re6Qhf9hLKqDdkZeNZ4AqTEv07Dr1VMC7SSA9BIpltk6g8CzxM6Ht2v4aZCHB/fAHFIxTEbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cpole\\Desktop\\.NET Core\\DatingApp.Core\\DatingApp.Core.csproj",
+  "projectFilePath": "D:\\.NET Core\\DatingApp.Core\\DatingApp.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cpole\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\cpole\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",

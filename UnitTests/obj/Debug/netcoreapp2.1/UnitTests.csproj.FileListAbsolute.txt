@@ -1,0 +1,15 @@
+D:\.NET Core\UnitTests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\.NET Core\UnitTests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\.NET Core\UnitTests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+D:\.NET Core\UnitTests\bin\Debug\netcoreapp2.1\UnitTests.deps.json
+D:\.NET Core\UnitTests\bin\Debug\netcoreapp2.1\UnitTests.runtimeconfig.json
+D:\.NET Core\UnitTests\bin\Debug\netcoreapp2.1\UnitTests.runtimeconfig.dev.json
+D:\.NET Core\UnitTests\bin\Debug\netcoreapp2.1\UnitTests.dll
+D:\.NET Core\UnitTests\bin\Debug\netcoreapp2.1\UnitTests.pdb
+D:\.NET Core\UnitTests\obj\Debug\netcoreapp2.1\UnitTests.csprojAssemblyReference.cache
+D:\.NET Core\UnitTests\obj\Debug\netcoreapp2.1\UnitTests.AssemblyInfoInputs.cache
+D:\.NET Core\UnitTests\obj\Debug\netcoreapp2.1\UnitTests.AssemblyInfo.cs
+D:\.NET Core\UnitTests\obj\Debug\netcoreapp2.1\UnitTests.csproj.CoreCompileInputs.cache
+D:\.NET Core\UnitTests\obj\Debug\netcoreapp2.1\UnitTests.dll
+D:\.NET Core\UnitTests\obj\Debug\netcoreapp2.1\UnitTests.pdb
+D:\.NET Core\UnitTests\obj\Debug\netcoreapp2.1\UnitTests.genruntimeconfig.cache

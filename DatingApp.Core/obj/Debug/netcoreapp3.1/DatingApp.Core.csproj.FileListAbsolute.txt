@@ -7,3 +7,12 @@ C:\Users\cpole\Desktop\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingAp
 C:\Users\cpole\Desktop\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingApp.Core.dll
 C:\Users\cpole\Desktop\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingApp.Core.pdb
 C:\Users\cpole\Desktop\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingApp.Core.csproj.CoreCompileInputs.cache
+D:\.NET Core\DatingApp.Core\bin\Debug\netcoreapp3.1\DatingApp.Core.deps.json
+D:\.NET Core\DatingApp.Core\bin\Debug\netcoreapp3.1\DatingApp.Core.dll
+D:\.NET Core\DatingApp.Core\bin\Debug\netcoreapp3.1\DatingApp.Core.pdb
+D:\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingApp.Core.csprojAssemblyReference.cache
+D:\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingApp.Core.AssemblyInfoInputs.cache
+D:\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingApp.Core.AssemblyInfo.cs
+D:\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingApp.Core.csproj.CoreCompileInputs.cache
+D:\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingApp.Core.dll
+D:\.NET Core\DatingApp.Core\obj\Debug\netcoreapp3.1\DatingApp.Core.pdb

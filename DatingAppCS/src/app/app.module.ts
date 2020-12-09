@@ -36,6 +36,7 @@ import { MemberEditResolver } from './_resolver/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { ListsResolver } from './_resolver/lists.resolver';
+import { MessagesResolver } from './_resolver/messages.resolver';
 
 @NgModule({
    declarations: [
@@ -49,8 +50,7 @@ import { ListsResolver } from './_resolver/lists.resolver';
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent,
-
+      PhotoEditorComponent
    ],
    imports: [
       BrowserModule,
@@ -84,6 +84,7 @@ import { ListsResolver } from './_resolver/lists.resolver';
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
+      MessagesResolver,
       ListsResolver,
       PreventUnsavedChanges
    ],

@@ -14,7 +14,6 @@ export class NavComponent implements OnInit {
 
   constructor(public authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
-
   // tslint:disable: typedef
   ngOnInit() {
     this.authService.currentPhotoUrl.subscribe(photoUrl => this.photoUrl = photoUrl);

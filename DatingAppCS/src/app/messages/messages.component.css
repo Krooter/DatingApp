@@ -1,0 +1,20 @@
+table {
+  margin-top: 15px;
+}
+
+.img-circle {
+  max-height: 50px;
+}
+
+td {
+  vertical-align: middle;
+}
+
+.card-body {
+  padding: 10px 15px;
+  border-top: 10px;
+}
+
+.card-footer {
+  padding: 10px 15px;
+}
