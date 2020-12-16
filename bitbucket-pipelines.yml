@@ -17,5 +17,5 @@ pipelines:
             name: Build and Test
             image: node:10.15.3
             script:
-              - cd ../DatingAppCS
+              - cd DatingAppCS
               - ng build
