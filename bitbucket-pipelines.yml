@@ -18,4 +18,5 @@ pipelines:
             image: node:10.15.3
             script:
               - cd DatingAppCS
-              - ng build
+              - npm install
+              - npm run build
