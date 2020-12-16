@@ -6,7 +6,6 @@
 #  This template allows you to validate your .NET Core package.
 #  The workflow allows running tests and code linting on the default branch.
 
-image: node:10.15.3
 image: mcr.microsoft.com/dotnet/core/sdk:3.1
 
 pipelines:
@@ -26,6 +25,7 @@ pipelines:
               - dotnet restore
               - dotnet build --no-restore --configuration Release
          - step:
+             image: node:10.15.3
              name: Build and Test Client Side
              caches:
               - node
