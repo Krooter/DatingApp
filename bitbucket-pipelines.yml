@@ -13,7 +13,7 @@ pipelines:
             caches:
               - dotnetcore
             script:
-              - cd UnitTests
+              - cd UnitTest
               - REPORTS_PATH=./test-reports/build_${BITBUCKET_BUILD_NUMBER}
               - dotnet restore
               - dotnet build --no-restore --configuration Release
