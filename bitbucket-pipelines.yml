@@ -1,19 +1,11 @@
-#  Template .NET Core build
-
-#  This template allows you to validate your .NET Core package.
-#  The workflow allows running tests and code linting on the default branch.
-
-image: mcr.microsoft.com/dotnet/core/sdk:3.1
-
 pipelines:
   default:
     - parallel:
         - step:
             name: Build and Test
-            caches:
-              - dotnetcore
+            image: mcr.microsoft.com/dotnet/core/sdk:3.1
             script:
-              - cd UnitTests
+              - cd UnitTest
               - REPORTS_PATH=./test-reports/build_${BITBUCKET_BUILD_NUMBER}
               - dotnet restore
               - dotnet build --no-restore --configuration Release
@@ -21,3 +13,17 @@ pipelines:
               - cd ../DatingApp
               - dotnet restore
               - dotnet build --no-restore --configuration Release
+        - step:
+            name: Build and Test
+            image: node:10.15.3
+            script:
+              - cd DatingAppCS
+              - npm install
+              - npm run build
+        - step:
+            name: Docker
+            image: mcr.microsoft.com/dotnet/core/sdk:3.1
+            script:
+              - docker build -f DatingApp/Dockerfile -t datingapp .
+            services:
+              - docker
