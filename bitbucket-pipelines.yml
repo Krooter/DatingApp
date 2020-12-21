@@ -25,7 +25,6 @@ pipelines:
             image: mcr.microsoft.com/dotnet/core/sdk:3.1
             script:
               - cd DatingApp
-              - docker build
               - docker run -d -p 8080:80 --name DatingApp aspnetapp
             services:
               - docker
