@@ -26,6 +26,5 @@ pipelines:
             script:
               - cd DatingApp
               - docker build - < Dockerfile
-              - docker run -d -p 8080:80 --name DatingApp aspnetapp
             services:
               - docker
