@@ -2381,6 +2381,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
           "ChinookDatabase.Sqlite": "1.4.0",
           "CloudinaryDotNet": "1.11.0",
+          "DatingApp.Core": "1.0.0",
           "DatingApp.Data": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.6",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.6",

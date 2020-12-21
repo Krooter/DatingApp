@@ -185,6 +185,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "D:\\.NET Core\\DatingApp.Core\\DatingApp.Core.csproj": {
+                "projectPath": "D:\\.NET Core\\DatingApp.Core\\DatingApp.Core.csproj"
+              },
               "D:\\.NET Core\\DatingApp.Data\\DatingApp.Data.csproj": {
                 "projectPath": "D:\\.NET Core\\DatingApp.Data\\DatingApp.Data.csproj"
               }
