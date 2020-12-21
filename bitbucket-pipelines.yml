@@ -13,8 +13,6 @@ pipelines:
               - cd ../DatingApp
               - dotnet restore
               - dotnet build --no-restore --configuration Release
-              - docker build -t aspnetapp .
-              - docker run -d -p 8080:80 --name DatingApp aspnetapp
         - step:
             name: Build and Test
             image: node:10.15.3
@@ -22,3 +20,10 @@ pipelines:
               - cd DatingAppCS
               - npm install
               - npm run build
+        - step:
+            name: Docker
+            image: mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+            script:
+              - docker build -t aspnetapp .
+              - docker run -d -p 8080:80 --name DatingApp aspnetapp
+            
