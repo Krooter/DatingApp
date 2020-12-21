@@ -8,6 +8,6 @@ COPY . .
 RUN dotnet publish -c Release -o res
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
-WORKDIR /app
-COPY --from=build-env /app/res .
+WORKDIR ../DatingApp
+COPY --from=build-env ../DatingApp .
 ENTRYPOINT ["dotnet", "aspnetapp.dll"]
